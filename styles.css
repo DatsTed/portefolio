@@ -25,7 +25,10 @@ nav ul {
 }
 
 nav li {
+    display: flex;
     font-size: 18px;
+    justify-content: space-around;
+    margin-left: 20px;
 }
 
 nav a {
@@ -50,6 +53,18 @@ main {
     text-align: center;
 }
 
+.formulaire {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.video {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 footer {
     text-align: center;
     background-color: #2196F3; 
@@ -77,14 +92,13 @@ footer {
     transition: transform 0.4s;
 }
 
-/* Styles pour le bouton de commutation du mode sombre */
+
 .dark-mode-toggle {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Déplace le bouton vers la droite de l'écran */
+    margin-left: auto; 
 }
 
-/* Styles pour le bouton de commutation */
 .dark-mode-toggle input[type="checkbox"] {
     display: none;
 }
@@ -115,7 +129,6 @@ footer {
     background-color: #333;
 }
 
-/* Styles pour le mode sombre */
 body.dark-mode {
     background-color: #333;
     color: #fff;
