@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2196F3; 
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0D47A1; 
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    min-height: 80vh;
+    margin-top: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #2196F3; 
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.4s;
+}
+
+/* Styles pour le bouton de commutation du mode sombre */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Déplace le bouton vers la droite de l'écran */
+}
+
+/* Styles pour le bouton de commutation */
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.dark-mode-toggle label {
+    display: block;
+    width: 30px;
+    height: 15px;
+    background-color: #ccc;
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.dark-mode-toggle label::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.dark-mode-toggle input:checked + label::before {
+    transform: translateX(15px);
+    background-color: #333;
+}
+
+/* Styles pour le mode sombre */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode-toggle label::before {
+    background-color: #333;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2196F3; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 15px 0;
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+    .nav-links a:hover {
+        color: #0D47A1; 
+    }
+}
